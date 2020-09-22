@@ -13,23 +13,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_login.setOnClickListener {
-            if (et_account.text.toString() == "1234" && et_password.text.toString() == "5678") {
-                Toast.makeText(this, "登入成功", Toast.LENGTH_SHORT).show()
-                tv_error_msg.visibility = View.INVISIBLE
-            }
+        val presenter = Presenter(this)
 
-            else {
-                Toast.makeText(this, "登入失敗", Toast.LENGTH_SHORT).show()
-                tv_error_msg.visibility = View.VISIBLE
-            }
+        btn_login.setOnClickListener {
+            val account = et_account.text.toString()
+            val password = et_password.text.toString()
+
+            presenter.compare(account, password)
+
         }
 
         btn_reset.setOnClickListener {
             et_account.text.clear()
             et_password.text.clear()
-            tv_error_msg.visibility = View.INVISIBLE
         }
 
     }
+
+    fun showSuccess() {
+        Toast.makeText(this, "登入成功", Toast.LENGTH_SHORT).show()
+    }
+
+    fun showFailure() {
+        Toast.makeText(this, "登入失敗", Toast.LENGTH_SHORT).show()
+    }
+
 }
