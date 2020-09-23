@@ -2,12 +2,10 @@ package com.example.helloworld
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Contract.View {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,11 +28,11 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun showSuccess() {
+    override fun showSuccess() {
         Toast.makeText(this, "登入成功", Toast.LENGTH_SHORT).show()
     }
 
-    fun showFailure() {
+    override fun showFailure() {
         Toast.makeText(this, "登入失敗", Toast.LENGTH_SHORT).show()
     }
 
