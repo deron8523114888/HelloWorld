@@ -1,7 +1,9 @@
 package com.example.helloworld
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -34,6 +36,14 @@ class MainActivity : AppCompatActivity(), Contract.View {
 
     override fun showFailure() {
         Toast.makeText(this, "登入失敗", Toast.LENGTH_SHORT).show()
+    }
+
+    override fun goToMain2() {
+        Handler().postDelayed({
+            val intent = Intent(this, Main2Activity::class.java)
+            startActivity(intent)
+            finish()
+        },2000)
     }
 
 }

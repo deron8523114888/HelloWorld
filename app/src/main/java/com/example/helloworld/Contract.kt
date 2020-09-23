@@ -5,6 +5,7 @@ interface Contract {
     interface View {
         fun showSuccess()
         fun showFailure()
+        fun goToMain2()
     }
 
     interface Presenter {
