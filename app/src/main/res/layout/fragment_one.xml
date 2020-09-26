@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:text="個人資料"
+        android:textSize="24dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp">
+
+
+        <TextView
+            android:id="@+id/tv_name_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:text="姓名："
+            android:textSize="22dp" />
+
+
+        <TextView
+            android:id="@+id/tv_name_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_name_left"
+            android:layout_alignBottom="@id/tv_name_left"
+            android:layout_toRightOf="@id/tv_name_left"
+            android:text="王小明"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/tv_school_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30dp"
+            android:text="學校："
+            android:textSize="22dp" />
+
+
+        <TextView
+            android:id="@+id/tv_school_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_school_left"
+            android:layout_alignBottom="@id/tv_school_left"
+            android:layout_toRightOf="@id/tv_school_left"
+            android:text="XXXX高中"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/tv_email_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_school_left"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="30dp"
+            android:text="Email："
+            android:textSize="22dp" />
+
+
+        <TextView
+            android:id="@+id/tv_email_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/tv_email_left"
+            android:layout_alignBottom="@id/tv_email_left"
+            android:layout_toRightOf="@id/tv_email_left"
+            android:text="xxxxxxx@gmail.com"
+            android:textSize="22dp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>
