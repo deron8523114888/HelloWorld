@@ -7,8 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.helloworld.R
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.fragment_two.*
 
 class FragmentTwo : Fragment() {
@@ -45,7 +47,6 @@ class FragmentTwo : Fragment() {
     }
 
     fun stateChange(position: Int) {
-
 
         if (state[position]) {
             layoutList[position].apply {
@@ -93,4 +94,5 @@ class FragmentTwo : Fragment() {
             it.isClickable = true
         }
     }
+
 }
